@@ -1,0 +1,30 @@
+* {
+    font-family: sans-serif;
+    box-sizing: border-box;
+    border: 3px double;
+}
+
+body {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+
+.calc {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    max-width: 500px;
+    margin: auto;
+    background-color: #aaaaaa;
+    padding: 1.5vw;
+    gap: 2vh;
+    border-radius: 10px;
+}
+
+.calc > div {
+    flex-grow: 1;
+    flex-shrink: 1;
+    background-color: #eeeeee;
+}
+
