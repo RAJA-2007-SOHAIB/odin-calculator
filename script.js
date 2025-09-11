@@ -140,6 +140,18 @@ const ifSecondOperatorThen = function (event, expression, value, answer) {
     }
 }
 
+const ifCalculatedThen = function(event, expression, value, answer) {
+    if (calculated && event.target.classList.contains("btn") && !isEqualto(event) && !isOperator(event)) {
+        firstNumber = "";
+        firstNumber = value;
+        secondNumber = "";
+        operator = "";
+        expression.textContent = firstNumber;
+        answer.textContent = "";
+        calculated = false;
+    }
+}
+
 
 const buttonListener = function () {
     const buttons = document.querySelectorAll(".btn");
@@ -153,6 +165,7 @@ const buttonListener = function () {
             ifOperatorThen(event, expression, value);
             ifEqualToThen(event, answer, value);
             ifSecondOperatorThen(event, expression, value, answer);
+            ifCalculatedThen(event, expression, value, answer);
         })
     })
 }
